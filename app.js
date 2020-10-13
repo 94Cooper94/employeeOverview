@@ -140,3 +140,23 @@ function viewDepts() {
       start();
   });
 }
+
+function viewRoles() {
+  // query the database for all items being auctioned
+  connection.query("SELECT * FROM roles", function (err, results) {
+    if (err) throw err;
+    // once you have the items, prompt the user for which they'd like to bid on
+      console.table(results)
+      start();
+  });
+}
+
+function viewEmployees() {
+  // query the database for all items being auctioned
+  connection.query("SELECT * FROM employees", function (err, results) {
+    if (err) throw err;
+    // once you have the items, prompt the user for which they'd like to bid on
+      console.table(results)
+      start();
+  });
+}
