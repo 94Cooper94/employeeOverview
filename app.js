@@ -45,6 +45,7 @@ function start() {
         default:
           connection.end();
       }
+      // okay so how will i add the addRoles and addEmployees here??
     });
 }
 
@@ -65,6 +66,60 @@ function addDepts() {
         "INSERT INTO departments SET ?",
         {
           departmentName: answer.deptName,
+        },
+        function (err) {
+          if (err) throw err;
+          console.log("Your department was created successfully!");
+          // re-prompt the user for if they want to bid or post
+          start();
+        }
+      );
+    });
+}
+
+function addRoles() {
+  // prompt for info about the item being put up for auction
+  inquirer
+    .prompt([
+      {
+        name: "roleName",
+        type: "input",
+        message: "What is the role?"
+      },
+    ])
+    .then(function (answer) {
+      // when finished prompting, insert a new item into the db with that info
+      connection.query(
+        "INSERT INTO roles SET ?",
+        {
+          role: answer.roleName,
+        },
+        function (err) {
+          if (err) throw err;
+          console.log("Your department was created successfully!");
+          // re-prompt the user for if they want to bid or post
+          start();
+        }
+      );
+    });
+}
+
+function addEmployees() {
+  // prompt for info about the item being put up for auction
+  inquirer
+    .prompt([
+      {
+        name: "employeeName",
+        type: "input",
+        message: "What is the department name?"
+      },
+    ])
+    .then(function (answer) {
+      // when finished prompting, insert a new item into the db with that info
+      connection.query(
+        "INSERT INTO employees SET ?",
+        {
+          employee: answer.employeeName,
         },
         function (err) {
           if (err) throw err;
