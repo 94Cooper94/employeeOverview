@@ -14,16 +14,16 @@
 ![Demo Pic](///)
 
 ## Installation
-///
+Navigate to the folder's location in your local machine's command line and begin to install the necessary packages by typing "npm install"-- this will populate the directory with the necessary methods & dependencies required to run the tests and ultimately view the tables.
   
 ## Tests
-///
+In order to run a test simply navigate to the folder location of app.js in your command line or integrated terminal and type "node app.js".
 
 ## License
 MIT
 
 ## Technology
-///
+Github, mySQL & workbench, node.js, JavaScript, json.
 
 ## Contributors
 Cooper Ahearn
