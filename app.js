@@ -39,8 +39,20 @@ function start() {
         case "Add departments":
           addDepts();
           break;
+        case "Add roles":
+          addRoles();
+          break;
+        case "Add employees":
+          addEmployees();
+          break;
         case "View departments":
           viewDepts();
+          break;
+        case "View roles":
+          viewRoles();
+          break;
+        case "View employees":
+          viewDEmployees();
           break;
         default:
           connection.end();
