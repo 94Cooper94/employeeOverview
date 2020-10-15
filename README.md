@@ -17,7 +17,7 @@
 Navigate to the folder's location in your local machine's command line and begin to install the necessary packages by typing "npm install"-- this will populate the directory with the necessary methods & dependencies required to run the tests and ultimately view the tables.
   
 ## Tests
-In order to run a test simply navigate to the folder location of app.js in your command line or integrated terminal and type "node app.js".
+In order to run a test simply navigate to the folder location of app.js in your command line or integrated terminal and type "node app.js". The user will be prompted whether they would like to add a department, role or employee and also whether they would like to view either of those categories.
 
 ## License
 MIT
