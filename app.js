@@ -1,3 +1,4 @@
+var util = require("util");
 var mysql = require("mysql");
 var inquirer = require("inquirer");
 require("dotenv").config();
@@ -23,6 +24,8 @@ connection.connect(function (err) {
   // run the start function after the connection is made to prompt the user
   start();
 });
+
+connection.query = util.promisify(connection.query);
 
 // function which prompts the user for what action they should take
 function start() {
